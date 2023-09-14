@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/container.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
@@ -42,7 +44,12 @@
             </li>
           </ul>
         </nav>
-        <address class="header-info">
+        <button class="btn-menu-open" data-menu-open>
+          <svg class="icon-menu-open" width="32" height="22">
+            <use href="./images/icons.svg#icon-charm_menu-hamburger-2"></use>
+          </svg>
+        </button>
+        <address class="header-address">
           <ul class="header-info list">
             <li class="header-info-item">
               <a class="header-info-link link" href="mailto:info@devstudio.com"
@@ -57,6 +64,17 @@
           </ul>
         </address>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container">
+          <button class="btn-menu-close" data-menu-close>
+            <svg class="icon-menu-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-Vector-1"></use>
+            </svg>
+          </button>
+          
+          </div>
+        </div>
+      
     </header>
     <main class="main">
       <!-- hero -->
@@ -106,7 +124,7 @@
               <h3 class="goals-item-name">Diligence</h3>
               <p class="goals-description">
                 Research and confirm brands that present the strongest digital
-                growth opportunities and minimize risk.>
+                growth opportunities and minimize risk.
               </p>
             </li>
             <li class="goals-item">
@@ -131,17 +149,25 @@
           <h2 class="activites-header">What are we doing</h2>
           <ul class="activites-list list">
             <li class="activites-item">
-              <img src="./images/computer.jpg" width="360" alt="Computer" />
-            </li>
-            <li class="activites-item">
               <img
-                src="./images/phonescreen.jpg"
-                width="360"
-                alt="Phone Screen"
+                srcset="./images/computer.jpg 1x, ./images/computer2x.jpg 2x"
+                src="./images/computer.jpg"
+                width="360" alt="Computer"
               />
             </li>
             <li class="activites-item">
-              <img src="./images/phone.jpg" width="360" alt="Phone" />
+              <img
+              srcset="./images/phonescreen.jpg 1x, ./images/phonescreen2x.jpg 2x"
+              src="./images/phonescreen.jpg"
+              width="360" alt="phonescreen"
+            />
+            </li>
+            <li class="activites-item">
+              <img
+              srcset="./images/phone.jpg 1x, ./images/phone2x.jpg 2x"
+              src="./images/phone.jpg"
+              width="360" alt="Phone"
+            />
             </li>
           </ul>
         </div>
@@ -152,11 +178,11 @@
           <h2 class="team-header">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img
-                class="team-img"
+              <img 
+              srcset="./images/img.jpg 1x, ./images/img-2x.jpg 2x"
                 src="./images/img.jpg"
-                width="264"
-                alt="Mark"
+                width="264" alt="Mark"
+                class="team-img"
               />
               <div class="team-member-div">
                 <h3 class="team-member">Mark Guerrero</h3>
@@ -191,13 +217,13 @@
                 </ul>
               </div>
             </li>
-            <!-- Tom -->
+           
             <li class="team-item">
-              <img
-                class="team-img"
+              <img 
+              srcset="./images/tom.jpg 1x, ./images/tom-2x.jpg 2x"
                 src="./images/tom.jpg"
-                width="264"
-                alt="Tom"
+                width="264" alt="Tom"
+                class="team-img"
               />
               <div class="team-member-div">
                 <h3 class="team-member">Tom Ford</h3>
@@ -233,13 +259,14 @@
                 </ul>
               </div>
             </li>
-            <!-- Camila -->
+           
             <li class="team-item">
-              <img
-                class="team-img"
+              <img 
+              srcset="./images/camila.jpg 1x, ./images/camila-2x.jpg 2x"
                 src="./images/camila.jpg"
-                width="264"
-                alt="Camila"
+                width="264" alt="Camila"
+                class="team-img"
+                
               />
               <div class="team-member-div">
                 <h3 class="team-member">Camila Garcia</h3>
@@ -275,11 +302,15 @@
                 </ul>
               </div>
             </li>
-            <!-- Daniel -->
+            
             <li class="team-item">
-              <img
+              <img 
+              srcset="./images/daniel.jpg 1x, ./images/daniel-2x.jpg 2x"
+              src="./images/daniel.jpg"
+                width="264" alt="Camila"
+                
                 class="team-img"
-                src="./images/daniel.jpg"
+                
                 width="264"
                 alt="Daniel"
               />
@@ -318,11 +349,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
       <section class="customers">
         <div class="customers-container container">
           <h2 class="header-customers">Customers</h2>
-          <!-- <div class="customers-box"> -->
+          
           <ul class="customers-list list">
             <li class="customers-item item">
               <a class="customers-link" href="./index.html">
@@ -356,11 +387,11 @@
             </li>
           </ul>
 
-          <!-- </div> -->
+          
         </div>
-      </section>
+      </section> 
     </main>
-    <footer class="footer">
+     <footer class="footer">
       <div class="footer-container container">
         <div class="footer-cont">
           <a class="footer-link link" href="./index.html"
@@ -414,101 +445,102 @@
     </form>
         </div>
       </div>
-    </footer>
+    </footer> 
+    <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <!-- <div class="modal-container"> -->
-          <button class="close" data-modal-close>
-            <svg class="vector" width="8" height="8">
-              <use href="./images/icons.svg#icon-Vector-1"></use>
-            </svg>
-          </button>
-          <p class="rewiew-form-text"> Leave your contacts and we will call you back</p>
-          <form class="rewiew">
-            <div class="modal-form-cont">
+        <button class="close" data-modal-close>
+          <svg class="vector" width="8" height="8">
+            <use href="./images/icons.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
+        <p class="rewiew-form-text">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="rewiew">
+          <div class="modal-form-cont">
             <label for="user-name" class="rewiew-form-label">Name</label>
-              <div class="modal-rewiew-cont">
-                <input
-                class="rewiew-form"
-                id="user-name" 
-                type="text" 
-                name="user-name"
-                pattern="[a-zA-Zа-яА-я]+"  
-                title="Olena"
-                 required
-                />
-                <svg class="rewiew-form-input-icon" width="18" height="24"> 
-                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
-                </svg>
-              </div>
-          </div>
-            <div class="modal-form-cont">
-            <label class="rewiew-form-label" for="user-phone">Phone</label>
-              <div class="modal-rewiew-cont">
+            <div class="modal-rewiew-cont">
               <input
-               class="rewiew-form"
-               type="tel"
+                class="rewiew-form"
+                id="user-name"
+                type="text"
+                name="user-name"
+                pattern="[a-zA-Zа-яА-я]+"
+                title="Olena"
+                required
+              />
+              <svg class="rewiew-form-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-cont">
+            <label class="rewiew-form-label" for="user-phone">Phone</label>
+            <div class="modal-rewiew-cont">
+              <input
+                class="rewiew-form"
+                type="tel"
                 name="user_phone"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
                 title="xxx-xxx-xx-xx"
-                required 
+                required
                 id="user-phone"
-                />
-                <svg class="rewiew-form-input-icon" width="18" height="24">
+              />
+              <svg class="rewiew-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
-                </svg>
-              </div>
+              </svg>
+            </div>
           </div>
           <div class="modal-form-cont">
-            <label class="rewiew-form-label" for="user-email">
-              Email</label>
-              <div class="modal-rewiew-cont">
-              <input 
-              class="rewiew-form" 
-              type="email" 
-              name="user_email" 
-              required 
-              id="user-email"
+            <label class="rewiew-form-label" for="user-email"> Email</label>
+            <div class="modal-rewiew-cont">
+              <input
+                class="rewiew-form"
+                type="email"
+                name="user_email"
+                required
+                id="user-email"
               />
               <svg class="rewiew-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
-            </svg>
+              </svg>
+            </div>
           </div>
-          </div>
-           <div class="rewiew-form-add">
+          <div class="rewiew-form-add">
             <label class="rewiew-form-label" for="user-comment">Comment</label>
-              <textarea 
+            <textarea
               class="rewiew-form-comment"
               name="user-comment"
-               placeholder="Text input"
-               id="user-comment"
-               ></textarea>
-              </div>
-              
-            
-              <div class="rewiew-form-cont-check">
-                <input 
-                class="rewier-input-modal visually-hidden"
-                id="user-privacy"
-                value="true"
-                  type="checkbox"
-                  name="user-privacy"
-                  required >
-                  <label class="rewiew-form-checkbox-label" for="user-privacy">
-                    <span class="rewiew-form-box" >
-                      <svg class="rewiew-form-own-checkbox" width="10" height="8">
-                        <use href="./images/icons.svg#icon-check"></use>
-                      </svg>
-                    </span>
-                    I accept the terms and conditions of the&nbsp;
-                    <a class="rewiew-form-policy" href="#">Privacy Policy</a>
-              </label>
-            </div>
-              <button class="rewiew-form-button" type="submit">Send</button>
-          </form>
-        </div>
-      <!-- </div> -->
+              placeholder="Text input"
+              id="user-comment"
+            ></textarea>
+          </div>
+
+          <div class="rewiew-form-cont-check">
+            <input
+              class="rewier-input-modal visually-hidden"
+              id="user-privacy"
+              value="true"
+              type="checkbox"
+              name="user-privacy"
+              required
+            />
+            <label class="rewiew-form-checkbox-label" for="user-privacy">
+              <span class="rewiew-form-box">
+                <svg class="rewiew-form-own-checkbox" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the&nbsp;
+              <a class="rewiew-form-policy" href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="rewiew-form-button" type="submit">Send</button>
+        </form>
+      </div>
     </div>
+    <script src="./mobile-menu.js"></script>
     <script src="./modal.js"></script>
   </body>
 </html>
