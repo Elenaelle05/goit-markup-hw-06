@@ -192,7 +192,7 @@ a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-    padding: 80px 35px 40px 40px;
+padding: 80px 35px 40px 40px;
   
 }
 .is-open {
